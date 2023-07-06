@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <style>
+
+        #contact-button {
+            position: fixed;
+            bottom: 20px;
+            right: 22px;
+            z-index: 9999;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2284ff;
+            box-shadow: 0 0 2px 2px #f6f8fa;
+          }
+          
+          #contact-icon {
+            width: 3.5em;
+            height: 3.5em;
+            border-radius: 50%;
+            cursor: pointer;
+            color: #ccc;
+          }
+          .contact-link:hover {
+            transform: scale(1.05);
+          }
+          
+          #contact-overlay {
+            display: none;
+            position: fixed;
+            bottom: 92px;
+            right: 20px;
+            animation: slideIn 0.3s ease-in-out forwards;
+        }
+      
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+          
+          #contact-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 4px;
+          }
+          
+          .contact-link{
+            cursor: pointer;
+            width: 4rem;
+            height: 4rem;
+
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border-radius: 50%;
+            box-shadow: 0 0 2px 2px #f6f8fa;
+            transition: .175s linear;
+            background-color: #fff;
+          }
+          .contact-link > img{
+            width: 2.8em;
+            height: 2.8em;
+            object-fit: cover;
+          }
+    </style>
+    <div class="head"></div>
+    <div id="contact-button">
+        <img id="contact-icon" src="./images/contact-icon.png" alt="Contact">
+        <div id="contact-overlay">
+          <div id="contact-content">
+              <a class="contact-link" href="https://www.instagram.com/minhduysolutions/"><img src="./images/download.png" alt=""></a>
+              <a class="contact-link" href="https://www.facebook.com/minhduysolutions"><img src="./images/mesenger.jpg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    <script src="./script.js"> </script>
+</body>
+</html>
